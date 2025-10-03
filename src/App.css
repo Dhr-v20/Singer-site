@@ -1,0 +1,942 @@
+Reset & Base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #bdfff9;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+/* Import Playwrite Canada */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+Canada:wght@300;400&display=swap');
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background-image: linear-gradient(to top, #001432, #001526, #001317, #000c07, #010201);
+  padding: 14px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 125px;
+}
+
+/* Thin elegant logo
+.logo {
+  line-height: 1;
+}
+
+
+.site-name {
+  font-family: "Playwrite Canada", cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #e6b800;
+}  */
+
+/* Thin elegant logo */
+.logo {
+  line-height: 1;
+}
+
+/* Neon theme for site name */
+.site-name {
+    animation: neonGlow 2s infinite alternate;
+    scale: 0.69;
+    margin-top: 25px;
+    margin-bottom: 13px;
+}
+
+.site-name-footer {
+    animation: neonGlow 2s infinite alternate;
+    scale: 0.69;
+    margin-top: -68px;
+    margin-left: -111px;
+}
+
+/* Neon pulsing animation */
+@keyframes neonGlow {
+  from {
+    text-shadow: 
+      0 0 5px #bce600,
+      0 0 10px #c5dbca,
+      0 0 20px #3bffe5,
+  }
+  to {
+    text-shadow: 
+      0 0 10px #f1e9c9,
+      0 0 20px #d1be72,
+      0 0 30px #ffeb3b,
+  }
+}
+
+
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.25rem;
+}
+.nav-links a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #e6b800;
+  transition: width 0.3s;
+}
+.nav-links a:hover { color: #e6b800; }
+.nav-links a:hover::after { width: 100%; }
+
+/* Social icons - hover colors */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: center;
+  
+}
+.social-icons a {
+  color: #f0f0f0;
+  transition: color 0.3s, transform 0.2s;
+}
+.social-icons a:hover {
+  transform: translateY(-2px);
+}
+.social-icons svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Individual hover colors */
+.social-icons a.facebook:hover { color: #1877f2; }    /* Facebook Blue */
+.social-icons a.instagram:hover { 
+  color: #e1306c; /* Instagram Pink */
+}
+.social-icons a.youtube:hover { color: #ff0000; }     /* YouTube Red */
+
+/* Neon running line */
+.neon-line {
+  width: 100%;
+  height: 8px;
+  
+  background: linear-gradient(470deg, #6ef8f1,#ff9900,#ff9d9d);
+  background-size: 500% 500%;
+  animation: neonRun 6s linear infinite;
+  box-shadow: 0 0 12px #ff00ff, 0 0 18px #00ffff;
+}
+
+@keyframes neonRun {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+
+
+/* Hero Section */
+.hero {
+   background: url("Background.jpeg") center/cover no-repeat; 
+  height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+}
+.hero .hero-content {
+  position: relative;
+  color: #fff;
+  margin-bottom: 5%;
+}
+.hero h1 {
+  font-size: 3rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+}
+.hero button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.8rem;
+  border: 2px solid #e6b800;
+  background: transparent;
+  color: #e6b800;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.hero button:hover {
+  background: #e6b800;
+  background-image: linear-gradient(to top, #001432, #001526, #001317, #000c07, #010201);
+}
+
+/* Page Sections */
+.page {
+  padding: 60px 0;
+  text-align: center;
+}
+.page h2 {
+  font-size: 2.5rem;
+  color: #e6b800;
+  margin-bottom: 1rem;
+}
+.page p {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+
+/* second info and imge */
+
+.abinfo {
+    display: -webkit-inline-box;
+    margin: 0 auto;
+}
+
+.Abimage {
+    position: absolute;
+    margin: 0 auto;
+    scale: 0.5;
+    border: 10px solid #e6b800;
+    border-radius: 55px;
+    top: 760px;
+    padding: 14px;
+    margin-left: -150px;
+}
+.Abtext {
+    width: 520px;
+    margin-top: 75px;
+    font-style: oblique;
+    margin-left: 650px;
+    margin-bottom: 50px;
+}
+
+
+/*Biography*/
+
+.biography-container {
+background-image: radial-gradient(circle, #022f72, #032038, #01262e, #000c07, #010201);
+  color: white;
+  padding: 60px 20px;
+  min-height: 100vh;
+  font-family: "Playwrite Canada", cursive;
+}
+
+.bio-title {
+  font-size: 3rem;
+  text-align: center;
+  color: #ffd700;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.bio-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 50px;
+}
+
+.highlight {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.timeline {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background: #ffd700;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item.left {
+  left: -20%;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item .content {
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  background-image: radial-gradient(circle, #001432, #001526, #001317, #000c07, #010201);
+  position: relative;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 630px;
+}
+
+.timeline-item .content:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.timeline-item img {
+  width: 700px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ffd700;
+}
+
+.timeline-item .text-box {
+  max-width: 400px;
+}
+
+.timeline-item h2 {
+  color: #ffd700;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.timeline-item p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Animation */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Gallery */
+/* .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem;
+}
+.gallery-grid img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+} */
+
+/* Section Styling */
+.gallery-section {
+  padding: 60px 20px;
+  background-image: radial-gradient(circle, #001432, #001526, #001317, #000c07, #010201);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.gallery-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+  font-family: "Playwrite Canada", cursive;
+}
+
+.gallery-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  border-radius: 12px;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+background-image: radial-gradient(circle, #001432, #001526, #001317, #000c07, #010201);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
+}
+
+.overlay span {
+  color: #ffd700;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Lightbox Modal */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #001432, #001526, #001317, #000c07, #010201);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox-img {
+  max-width: 200%;
+  max-height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  animation: fadeIn 0.3s ease-in-out;
+  height: 680px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Buttons */
+.close-btn,
+.prev-btn,
+.next-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  color: #ffd700;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.close-btn { top: 20px; right: 30px; font-size: 2.2rem; }
+.prev-btn { left: 40px; }
+.next-btn { right: 40px; }
+
+.close-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+
+
+
+
+/* Video */
+
+
+/* Section Styling */
+.video-section {
+  padding: 60px 20px;
+ background-image: radial-gradient(circle, #001432, #001526, #001317, #000c07, #010201);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.video-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #d8ff4d;
+  font-family: "Playwrite Canada", cursive;
+}
+
+.video-subtitle {
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.video-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.video-item:hover video {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ background-image: radial-gradient(circle, #001432, #001526, #001317, #000c07, #010201);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
+}
+
+.overlay span {
+  color: #caff4d;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.video-item:hover .overlay {
+  opacity: 1;
+}
+
+.video-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(187, 226, 44, 0.4);
+}
+
+/* Lightbox Modal */
+.video-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #001432, #001526, #001317, #000c07, #010201);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.video-wrapper {
+  max-width: 90%;
+  max-height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-video {
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.6);
+}
+
+/* Landscape (16:9) */
+.lightbox-video.landscape {
+  width: 80%;
+  height: auto;
+}
+
+/* Portrait (9:16) */
+.lightbox-video.portrait {
+  height: 80%;
+  width: auto;
+}
+
+/* Buttons */
+.close-btn,
+.prev-btn,
+.next-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  color: #ff4d6d;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.close-btn { top: 20px; right: 30px; font-size: 2.2rem; }
+.prev-btn { left: 40px; top: 50%; transform: translateY(-50%); }
+.next-btn { right: 40px; top: 50%; transform: translateY(-50%); }
+
+.close-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+
+/* Contact */
+
+.contact-section {
+  padding: 60px 20px;
+ background-image: radial-gradient(circle, #001432, #001526, #001317, #000c07, #010201);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ff4d6d;
+  font-family: "Playwrite Canada", cursive;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact-info {
+  font-size: 1rem;
+  color: #ccc;
+  text-align: center;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #222;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, background 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #ff4d6d;
+  background-image: radial-gradient(circle, #001432, #001526, #001317, #000c07, #010201);
+}
+
+.submit-btn {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background: #ff3355;
+  transform: scale(1.05);
+}
+
+
+/* Footer */
+.footer {
+ background-image: linear-gradient(to bottom, #001432, #001526, #001317, #000c07, #010201);
+  padding: 40px 20px;
+  color: #aaa;
+  height: 300px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+  margin-top: 55px;
+}
+
+.footer-logo h2 {
+  font-family: "Playwrite Canada", cursive;
+  font-size: 1.8rem;
+  color: #e6b800;
+  margin-bottom: 10px;
+}
+
+.footer-links h3,
+.footer-social h3,
+.footer-video h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links a,
+.footer-video a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-video a:hover {
+  color: #e6b800;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #008ae6;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: radial-gradient(circle, #001432, #001526, #001317, #000c07, #010201);
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  background: url("Background.jpeg") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+ background-image: radial-gradient(circle, #001432, #001526, #001317, #000c07, #010201);
+}
+.hero .hero-content {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #e6b800;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+}
+.hero button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.8rem;
+  border: 2px solid #e6b800;
+  background: transparent;
+  color: #e6b800;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.hero button:hover {
+  background: #e6b800;
+  background-image: radial-gradient(circle, #001432, #001526, #001317, #000c07, #010201);
+}
+
+/* Page Sections */
+.page {
+  padding: 60px 0;
+  text-align: center;
+}
+.page h2 {
+  font-size: 2.5rem;
+  color: #e6b800;
+  margin-bottom: 1rem;
+}
+.page p {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Video Showcase */
+.video-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.video-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.video-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  pointer-events: none;
+}
